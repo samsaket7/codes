@@ -32,7 +32,7 @@ def preprocess(path_of_file='input.txt',sequence_length=50):
    
  
 def postprocess_3d(predicted_data,path_of_file):
-	sequence_length,num_data,_ = predicted_data.shape
+	num_data = predicted_data.shape[1]
 	output_file = open(path_of_file,'w')
 	for i in range(num_data):
 		string = asciiVec_2_str(predicted_data[:,i,:])
